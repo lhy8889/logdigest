@@ -1,0 +1,10 @@
+# build output
+/logdigest
+/logdigest.exe
+/dist/
+
+# editor and OS noise
+.DS_Store
+*.swp
+.idea/
+.vscode/

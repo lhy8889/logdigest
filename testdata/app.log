@@ -1,0 +1,29 @@
+2026-11-05 09:00:01 INFO  server listening on :8080
+2026-11-05 09:00:03 INFO  GET /health 200 3ms
+2026-11-05 09:00:04 INFO  GET /health 200 2ms
+2026-11-05 09:00:07 WARN  slow query took 1284ms: SELECT * FROM orders WHERE id = 8812
+2026-11-05 09:00:09 INFO  POST /orders 201 42ms
+2026-11-05 09:00:11 ERROR upstream timeout after 3001ms calling payment-gateway 10.4.19.7
+    at payment.Client.Charge (/srv/app/payment/client.go:214)
+    at orders.(*Service).Create (/srv/app/orders/service.go:88)
+    at http.HandlerFunc.ServeHTTP (/srv/app/orders/handler.go:41)
+2026-11-05 09:00:12 ERROR upstream timeout after 3004ms calling payment-gateway 10.4.19.7
+    at payment.Client.Charge (/srv/app/payment/client.go:214)
+    at orders.(*Service).Create (/srv/app/orders/service.go:88)
+    at http.HandlerFunc.ServeHTTP (/srv/app/orders/handler.go:41)
+2026-11-05 09:00:14 INFO  GET /health 200 4ms
+2026-11-05 09:00:18 WARN  slow query took 2011ms: SELECT * FROM orders WHERE id = 99031
+2026-11-05 09:00:21 ERROR upstream timeout after 3000ms calling payment-gateway 10.4.19.7
+    at payment.Client.Charge (/srv/app/payment/client.go:214)
+    at orders.(*Service).Create (/srv/app/orders/service.go:88)
+    at http.HandlerFunc.ServeHTTP (/srv/app/orders/handler.go:41)
+2026-11-05 09:00:23 INFO  POST /orders 201 88ms
+2026-11-05 09:00:26 ERROR user 4f1c8e22-7d3b-4c1a-9e55-1c2b3a4d5e6f not found in tenant acme
+2026-11-05 09:00:29 INFO  GET /health 200 2ms
+2026-11-05 09:00:31 WARN  slow query took 1502ms: SELECT * FROM orders WHERE id = 4410
+2026-11-05 09:00:33 ERROR user 7a2d9b10-3f4e-4a88-b1c2-0d9e8f7a6b5c not found in tenant acme
+2026-11-05 09:00:35 INFO  POST /orders 201 51ms
+2026-11-05 09:00:38 ERROR redis: connection refused 127.0.0.1:6379
+2026-11-05 09:00:39 ERROR redis: connection refused 127.0.0.1:6379
+2026-11-05 09:00:40 ERROR redis: connection refused 127.0.0.1:6379
+2026-11-05 09:00:42 INFO  GET /health 200 3ms
